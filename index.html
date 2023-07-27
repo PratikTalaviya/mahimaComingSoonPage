@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Mahima Architects</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/374026b3e3.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="logo-image-container">
+                <img class="logo-image" src="images/Untitled-1.png" alt="Logo">
+            </div>
+            <div class="sub-container">
+                <h1>We Are Coming Soon!</h1>
+                <h2>The Best Design Solution In Any Style.</h2>
+                
+                <!-- Display the countdown timer in an element -->
+                <div class="countdown-container">
+                    <div class="countdown">
+                        <p class="timer" id="days"></p>
+                        <h5>Days</h5>
+                    </div>
+                    <div class="countdown">
+                        <p class="timer" id="hours"></p>
+                        <h5>Hours</h5>
+                    </div>
+                    <div class="countdown">
+                        <p class="timer" id="min"></p>
+                        <h5>Minutes</h5>
+                    </div>
+                    <div class="countdown">
+                        <p class="timer" id="sec"></p>
+                        <h5>Seconds</h5>
+                    </div>
+                </div>
+
+                <script>
+                // Set the date we're counting down to
+                var countDownDate = new Date("Jan 15, 2024 15:37:25").getTime();
+
+                // Update the count down every 1 second
+                var x = setInterval(function() {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("min").innerHTML = minutes;
+                document.getElementById("sec").innerHTML = seconds
+
+                // If the count down is finished, write some text
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+                }, 1000);
+                </script>
+                <div class="contact">
+                    <h2>Contact Details</h2>
+                    <p>9859871371</p>
+                    <p>mahima.arch07@gmail.com</p>
+                </div>
+                <div class="footer">
+                    <a class="footer-link" href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl footer-icon"></i></a>
+                    <a class="footer-link" href="https://facebook.com/"><i class="fa-brands fa-facebook fa-2xl footer-icon"></i></a>
+                    <a class="footer-link" href="https://instagram.com/"><i class="fa-brands fa-instagram fa-2xl footer-icon"></i></a>
+                    <a class="footer-link" href="https://gmail.com/"><i class="fa-solid fa-envelope fa-2xl footer-icon"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="img-container">
+           <img class="image-container" src="images/image1.jpg" alt="Building Image">
+        </div>
+    </div>
+</body>
+</html>
